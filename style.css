@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "Lexend", sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    background-image: url(vecteezy_blue-gradient-background-with-curved-elements-used-for_7343586-1.jpg);
+}
+
+/* Navbar Styling */
+nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* Header Content */
+.header-content {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #ffffffe5;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Glassmorphism Card */
+section {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+    width: 80%;
+    max-width: 10000px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-photo {
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    flex: 1 1 calc(50% - 20px);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.project-description {
+    text-align: center;
+}
+
+.project-description a {
+    color: rgba(148, 148, 148, 0.973);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+
+.tech-boxes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tech-box {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 5px 10px;
+    backdrop-filter: blur(10px);
+    color: #333333;
+    font-size: 14px;
+    text-align: center;
+}
+
+.project-content {
+    position: relative;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-link {
+    display: block;
+    margin-top: 10px;
+    color: #31a8ff;
+    text-decoration: none;
+}
+
+
+/* Footer Styling */
+footer {
+    margin: 20px 0;
+    text-align: center;
+    color: #777;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        margin-bottom: 20px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .project {
+        flex: 1 1 100%;
+    }
+
+    .project-image {
+        width: 100%;
+    }
+}
+
+/* Technologies Section */
+#technologies {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#technologies h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Ribbon Animation */
+.ribbon {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 10px 0;
+    /* background: linear-gradient(90deg, #464CC6, #6D79FD); */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 80px;
+}
+
+.ribbon-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    animation: slide 20s linear infinite;
+}
+
+/* Glassmorphism Effect for Icons */
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.tech-icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Animation for Ribbon */
+@keyframes slide {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .tech-icon {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/* Styling for the Typed Effect */
+
+#typing {
+    font-size: 2em;
+    color: #ffffffe5;
+}
+
+.typed {
+    font-weight: bold;
+    color: #243866;
+    /* Adjust color as needed */
+}
+
+/* Styling for Cursor */
+.typed-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: transparent;
+    animation: blink 0.7s infinite step-start;
+}
+
+@keyframes blink {
+    50% {
+        background: transparent;
+    }
+}
+
+#contact {
+    text-align: center;
+    padding: 50px;
+}
+
+#contact h3 {
+    letter-spacing: 2px;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    margin-left: 25rem;
+}
+
+.contact-link a {
+    text-decoration: none;
+    color: #e4e3ff;
+    font-size: 1.2rem;
+}
+
+.contact-link a:hover {
+    color: #ffffff;
+}
