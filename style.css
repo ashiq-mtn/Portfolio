@@ -439,7 +439,6 @@ footer {
     flex-direction: column;
     align-items: start;
     gap: 8px;
-    margin-left: 25rem;
 }
 
 .contact-link a {
